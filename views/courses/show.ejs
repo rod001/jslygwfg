@@ -1,0 +1,49 @@
+<h1 class="center">ブログ
+  <%= course.title %>
+</h1>
+
+<table class="table">
+  <tr>
+    <th>テーマ</th>
+    <td>
+      <%= course.title %>
+    </td>
+  </tr>
+  <tr>
+    <th>概要</th>
+    <td>
+      <%= course.description%>
+    </td>
+  </tr>
+  <tr>
+    <th>気になる度</th>
+    <td>
+      <%= course.maxStudents%>
+    </td>
+  </tr>
+  <tr>
+    <th>ハッピー点数</th>
+    <td>$
+      <%= course.cost%>
+    </td>
+  </tr>
+  <tr>
+    <th>写真</th>
+    <td>$
+      <%= course.photo%>
+    </td>
+  </tr>
+</table>
+
+
+<div>
+  <a class="button" href="<%=`/courses/${course._id}/edit`%>">
+    ブログを編集
+  </a>
+</div>
+<div>
+  <a class="button" href="<%= `/courses/${course._id}/delete?_method=DELETE` %>" onclick="return confirm('削除してもよろしいでしょうか？')" a>削除</a>
+</div>
+<div>
+  <a class="button" href="/courses">ブログ一覧</a>
+</div>

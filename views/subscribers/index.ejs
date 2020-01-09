@@ -1,0 +1,10 @@
+<h2 class="center">チャート（情報交換）</h2>
+<% if (currentUser) { %>
+  <form id="chatForm">
+    <input id="chat-input" type="text">
+    <input id="chat-user-id" type="hidden" value="<%= currentUser._id %>">
+    <input id="chat-user-name" type="hidden" value="<%=currentUser.fullName %>">
+    <input type="submit" value="Send">
+  </form>
+  <div id="chat"></div>
+  <% } %>

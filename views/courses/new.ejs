@@ -1,0 +1,19 @@
+<div class="data-form">
+  <form class="form-signin" action="<%=`/courses/create`%>" method="POST" enctype="multipart/form-data" >
+    <h2 class="form-signin-heading">新ブログ作成:</h2>
+    <label for="inputTitle">テーマ</label>
+    <input type="text" name="title" id="inputTitle" class="form-control" placeholder="Title" autofocus>
+    <label for="inputDescription">概要</label>
+    <input type="text" name="description" id="inputDescription" class="form-control" placeholder="Description">
+    <label for="inputMaxStudents">気になる度</label>
+    <input type="text" name="maxStudents" id="inputMaxStudents" pattern="\d*" class="form-control" placeholder="Max Students" required>
+    <label for="inputCost">ハッピー点数</label>
+    <input type="text" name="cost" id="inputCost" pattern="\d*" class="form-control" placeholder="Cost" required>
+    <label for="inputCost">写真</label>
+    <div class="file-wrap">
+      画像を追加
+      <input type="file" name="image_file" class="file">
+  </div>
+    <br /><button class="btn btn-lg btn-primary btn-block" type="submit">保存</button>
+  </form>
+</div>
